@@ -1,7 +1,8 @@
-kNNRegression
+# kNNRegression
 
-Introduce
-      Differential privacy is an effective way for private data protection, but makes it quite difficult for the task of classifying private
+## introduce
+
+Differential privacy is an effective way for private data protection, but makes it quite difficult for the task of classifying private
 data, due to that it destroys the authenticity of the data. And the situation is even worse in distributed context. In this paper, we propose
 a schema named DistributedPrivateKNN for classifying private data in distributed context, which includes training model and testing
 model. In training model, kNN Regression (kNNReg) is invented for training private data, which is able to roughly restore the
@@ -11,10 +12,13 @@ by kNNReg, without leaking data privacy. The experimental results show that our 
 privacy, but also has satisfactory performance in four aspects: the noisy data scale, neighborhood structure, noise directions and
 classification accuracy.
 
-Environment
-    Internet Core i7-8700 CPU @3.20 GHz, 16G RAM. The Code is written in Matlab and run on window 10 (64).
+## Environment
+    
+Internet Core i7-8700 CPU @3.20 GHz, 16G RAM. The Code is written in Matlab and run on window 10 (64).
 
-Branch introduce
+## Files introduce
+
+
     1. test : Run code
     2. trainPartialDP :  Model training code
     3. genLaplasNoise : Generate Laplace noise
@@ -25,7 +29,8 @@ Branch introduce
     8. getAcc : Calculate similarity, i.e., accuracy
     9. knnClassify : The poll categorizes test_data by kNN and compares it against the given answer label.
 
-Guideline
+## Guideline
+
     1. Data sets Divide test data sets and training data sets.
     2. The parameter information of each data set can be modified in the test code.
     3. By running test, covariance, nearest neighbor similarity, accuracy of each node and overall accuracy can be obtained. 
